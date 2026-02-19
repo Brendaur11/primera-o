@@ -1,10 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Heart, Star, Smile, Sparkles } from "lucide-react";
+import SecretLetter from "./SecretLetter";
+import LoveQuiz from "./LoveQuiz";
+import { Heart, Smile, Sparkles, House, Bird } from "lucide-react";
+import moments from "../data/moments";
 
 export default function AnniversaryPage() {
   return (
-    <div className="scroll-smooth bg-gradient-to-b from-blue-200 via-blue-300 to-blue-400 min-h-screen text-white overflow-x-hidden">
+    <div className="scroll-smooth bg-gradient-to-b from-blue-300 via-blue-300 to-blue-400 min-h-screen text-white overflow-x-hidden">
       
       {/* ================= HERO SECTION ================= */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative">
@@ -13,16 +16,16 @@ export default function AnniversaryPage() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="flex items-center gap-3 mb-6"
+          className="flex flex-col items-center gap-3 mb-6"
         >
           <motion.div
             animate={{ scale: [1, 1.15, 1] }}
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           >
-            <Heart className="w-10 h-10 text-pink-400 fill-pink-400" />
+            <Heart className="w-12 h-12 text-pink-400 fill-pink-400" />
           </motion.div>
           <h1 className="text-4xl md:text-6xl font-bold">
-            Feliz 1 Año Mi Amor ❤️
+            Feliz 1 año Piojito
           </h1>
         </motion.div>
 
@@ -32,8 +35,7 @@ export default function AnniversaryPage() {
           transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
           className="max-w-xl text-lg md:text-xl text-gray-100 mb-8"
         >
-          Un año de risas, abrazos, sueños compartidos y el comienzo de una
-          historia que quiero que dure para siempre.
+          Nuestro primer año juntas, lleno de amor, viajes, malas rachas pero tambien con éxtios, proyectos y mucho compañerismo.
         </motion.p>
 
         <motion.a
@@ -42,10 +44,10 @@ export default function AnniversaryPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
           whileHover={{ scale: 1.05 }}
-          className="relative inline-block px-8 py-3 rounded-full bg-pink-400 text-white font-semibold overflow-hidden shadow-lg"
+          className="relative inline-block px-8 py-3 rounded-full bg-pink-300 text-white font-semibold overflow-hidden shadow-lg"
         >
           <span className="relative z-10">
-            Desliza para ver nuestra historia
+            Seguí bajando para ver nuestra historia
           </span>
           <motion.div
             className="absolute inset-0 bg-white opacity-10"
@@ -70,9 +72,9 @@ export default function AnniversaryPage() {
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {[1, 2, 3, 4].map((item, index) => (
+          {moments.map((moment, index) => (
             <motion.div
-              key={item}
+              key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -83,22 +85,32 @@ export default function AnniversaryPage() {
               whileHover={{ scale: 1.03 }}
               className="bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-xl"
             >
-              {/* IMAGE PLACEHOLDER */}
-              <div className="h-52 bg-gray-200 rounded-xl mb-5" />
+              <div className="h-80 rounded-xl mb-5 overflow-hidden">
+                <img
+                  src={moment.image}
+                  alt={moment.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               <h3 className="text-xl font-semibold mb-2">
-                Momento Especial {item}
+                {moment.title}
               </h3>
 
               <p className="text-gray-100 text-sm">
-                Aquí irá un recuerdo hermoso de nuestra historia, uno de esos
-                momentos que guardamos en el corazón y que quiero revivir cada
-                día contigo.
+                {moment.text}
               </p>
             </motion.div>
           ))}
         </div>
+
       </section>
+
+      {/* ================= CARTA SECRETA ================= */}
+      <section className="py-24 px-6 text-center relative">
+        <SecretLetter />
+      </section>
+
 
       {/* ================= RAZONES ================= */}
       <section className="py-20 px-6 text-center bg-white/10 backdrop-blur-sm">
@@ -118,10 +130,11 @@ export default function AnniversaryPage() {
           className="flex flex-col gap-6 max-w-xl mx-auto"
         >
           {[
-            { icon: Heart, text: "Porque haces que cada día sea especial." },
-            { icon: Smile, text: "Porque tu sonrisa ilumina mi mundo." },
-            { icon: Star, text: "Porque eres mi inspiración constante." },
-            { icon: Sparkles, text: "Porque contigo todo es mágico." },
+            { icon: Bird, text: "Porque me generas paz." },
+            { icon: Smile, text: "Por tu compañerismo y madurez." },
+            { icon: Heart, text: "Porque tenes el corazon mas grande del mundo." },
+            { icon: Sparkles, text: "Porque haces que todo tenga sentido." },
+            { icon: House, text: "Porque sos mi hogar." },
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -138,6 +151,11 @@ export default function AnniversaryPage() {
           ))}
         </motion.div>
       </section>
+
+      <section className="py-24 px-6 text-center">
+        <LoveQuiz />
+      </section>
+
 
       {/* ================= FINAL SECTION ================= */}
       <section className="relative py-24 px-6 text-center overflow-hidden">
@@ -160,7 +178,7 @@ export default function AnniversaryPage() {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="text-3xl md:text-5xl font-bold mb-6"
         >
-          Gracias por este primer año maravilloso 💖
+          Gracias por este primer año hermoso 💖
         </motion.h2>
 
         <motion.p

@@ -8,12 +8,12 @@ export default function LoveQuiz() {
     {
       question: "¿Dónde fue nuestro primer beso?",
       options: ["En tu casa", "En un baño", "En un boliche"],
-      answer: 0,
+      answer: 2,
     },
     {
       question: "¿Quién se fijo primera en la otra?",
       options: ["Vos (bren)", "Yo", "Ambas al mismo tiempo"],
-      answer: 0,
+      answer: 1,
     },
     {
       question: "¿Que comida solemos pedir siempre?",

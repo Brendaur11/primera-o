@@ -25,7 +25,7 @@ export default function AnniversaryPage() {
             <Heart className="w-12 h-12 text-pink-400 fill-pink-400" />
           </motion.div>
           <h1 className="text-4xl md:text-6xl font-bold">
-            Feliz 1 año Piojito
+            Feliz 1 año Amor!
           </h1>
         </motion.div>
 
@@ -107,7 +107,7 @@ export default function AnniversaryPage() {
       </section>
 
       {/* ================= CARTA SECRETA ================= */}
-      <section className="py-24 px-6 text-center relative">
+      <section className="py-24 my-12 px-6 text-center relative">
         <SecretLetter />
       </section>
 

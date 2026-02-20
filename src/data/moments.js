@@ -23,8 +23,8 @@ const moments = [
   },
   {
     image: img4,
-    title: "Nuestro primer recital",
-    text: "Porque cualquier plan con vos siempre es lindo. Hacerme conocer tu música favorita y compartir eso conmigo es algo que valoro muchísimo. Gracias por tu compañerismo y tu amor, por mas recitales juntas.",
+    title: "Actualidad",
+    text: "Y hoy estamos aca, un año después, con muchas cosas vividas, aprendidas y por vivir. Gracias por ser parte de esto, por ser mi compañera, mi amor. Te amo mucho.",
   },
 ];
 

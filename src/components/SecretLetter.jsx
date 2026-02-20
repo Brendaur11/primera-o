@@ -29,7 +29,7 @@ export default function SecretLetter() {
             initial={{ scale: 0.8, y: 50 }}
             animate={{ scale: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="bg-white text-gray-800 rounded-2xl p-8 max-w-md w-full shadow-2xl text-center"
+            className="bg-gray-100 my-12 text-gray-800 rounded-2xl p-8 max-w-md w-full shadow-2xl text-center"
           >
             {!revealed ? (
               <>
@@ -55,14 +55,13 @@ export default function SecretLetter() {
                   animate={{ opacity: 1 }}
                   className="text-lg leading-relaxed"
                 >
-                  Piojo,
+                  Amor,
                   <br /><br />
                   Feliz añito juntas! ❤️ Se que quizás para algunos un año no es nada, pero creeme que para mi es mucho.
                   Al menos creo que es un  gran logro para nosotras, porque no solo es un año de relación, sino un año de crecimiento, de aprendizaje y de amor.
                   Me pone mas que feliz este primer año, anhelo un monton que sean muchisimos mas, que sigamos creciendo, aprendiendo,
                   viajando y proyectando juntas. Gracias por ser esa compañera incondicondicional, por apañarme, cuidarme y enseñarme.
-                  Gracias por cada esfuerzo y trabajo que hiciste para que hoy podamos estar aca. Prometo darte el mundo entero, porque 
-                  por vos cruzo mar y tierra.
+                  Gracias por cada esfuerzo y trabajo que hiciste para que hoy podamos estar aca. Prometo darte el mundo entero.
                   <br /><br />
                   Te amo para siempre.
                 </motion.p>
